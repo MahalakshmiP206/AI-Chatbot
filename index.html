@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot Assistant</title>
+
+    <!-- Google Fonts for Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded"
+      rel="stylesheet"
+    />
+
+    <!-- Splash Animation -->
+    <style>
+      .splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #242424;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        z-index: 9999;
+        animation: fadeOut 1.5s ease 1.5s forwards;
+      }
+
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    </style>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+
+  <body>
+    <!-- Splash Screen -->
+    <div class="splash-screen">👋 Welcome to Maha's Chatbot</div>
+
+    <!-- Header Section -->
+    <header class="header">
+      <h2 class="title">Hello, there 👋</h2>
+      <h4 class="subtitle">How can I help you today?</h4>
+
+      <!-- Suggested Prompts -->
+      <ul class="suggestion-list">
+        <li class="suggestion">
+          <h4 class="text">
+            Help me plan a game night with my 5 best friends for under $100.
+          </h4>
+          <span class="icon material-symbols-rounded">draw</span>
+        </li>
+        <li class="suggestion">
+          <h4 class="text">
+            What are the best tips to improve my public speaking skills?
+          </h4>
+          <span class="icon material-symbols-rounded">lightbulb</span>
+        </li>
+        <li class="suggestion">
+          <h4 class="text">
+            Can you help me to find the latest news on web development
+          </h4>
+          <span class="icon material-symbols-rounded">explore</span>
+        </li>
+        <li class="suggestion">
+          <h4 class="text">
+            Write JavaScript code to sum all elements in an array.
+          </h4>
+          <span class="icon material-symbols-rounded">code</span>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Chat Container -->
+    <main>
+      <div class="chat-list">
+        <!-- Messages will be dynamically added here -->
+      </div>
+      <!-- Typing Indicator -->
+      <div
+        class="typing-indicator"
+        style="display: none; text-align: center; margin: 10px 0"
+      >
+        <span>Gemini is typing<span class="dots">...</span></span>
+      </div>
+    </main>
+
+    <!-- Typing Input Area -->
+    <div class="typing-area">
+      <form action="#" class="typing-form">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            placeholder="Enter a prompt here"
+            class="typing-input"
+            required
+          />
+          <button class="icon material-symbols-rounded" type="submit">
+            send
+          </button>
+        </div>
+        <div class="action-button">
+          <span
+            id="toggle-theme-button"
+            class="icon material-symbols-rounded"
+            title="Toggle Theme"
+            >light_mode</span
+          >
+          <span
+            id="delete-chat-button"
+            class="icon material-symbols-rounded"
+            title="Clear Chat"
+            >delete</span
+          >
+        </div>
+      </form>
+      <p class="disclaimer-text">
+        ⚠ Gemini may display inaccurate info, including about people. Please
+        double-check facts.
+      </p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <p>&copy; 2025 Maha’s Chatbot | Powered by HTML, CSS & JavaScript</p>
+      <div class="social-icons">
+        <a href="#"><span class="icon material-symbols-rounded">share</span></a>
+        <a href="#"
+          ><span class="icon material-symbols-rounded">favorite</span></a
+        >
+        <a href="#"><span class="icon material-symbols-rounded">info</span></a>
+      </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="chat.js"></script>
+  </body>
+</html>
